@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9F4D9B08-52D3-4D56-B69F-786F32C9288B}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>DigitalCurrencyConverterExe</RootNamespace>
-    <AssemblyName>DigitalCurrencyConverterExe</AssemblyName>
+    <ProjectGuid>{DCCEF85B-07D1-49A5-A5B6-221BDD02FE32}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DigitalCurrencyConverterLibrary</RootNamespace>
+    <AssemblyName>DigitalCurrencyConverterLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,17 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Bitcoin.cs" />
+    <Compile Include="Cash.cs" />
+    <Compile Include="Currency.cs" />
+    <Compile Include="Etherium.cs" />
+    <Compile Include="Litecoin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DigitalCurrencyConverterLibrary\DigitalCurrencyConverterLibrary.csproj">
-      <Project>{dccef85b-07d1-49a5-a5b6-221bdd02fe32}</Project>
-      <Name>DigitalCurrencyConverterLibrary</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
